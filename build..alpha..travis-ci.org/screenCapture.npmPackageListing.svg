@@ -1,0 +1,44 @@
+<svg height="654" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="654" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26">  0.  2017-04-07 12:29:11 +0000   192972 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-07 12:29:11 +0000     1084 bytes  LICENSE</tspan>
+<tspan x="10" y="58">  2.  2017-04-07 12:29:11 +0000     8053 bytes  README.md</tspan>
+<tspan x="10" y="74">  3.  2017-04-07 12:29:11 +0000    19587 bytes  assets/logo.png</tspan>
+<tspan x="10" y="90">  4.  2017-04-07 12:29:11 +0000     5417 bytes  bin/cli.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-07 12:29:11 +0000    22703 bytes  index.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-07 12:29:11 +0000      903 bytes  kubernetes/scc-broker-deployment.yaml</tspan>
+<tspan x="10" y="138">  7.  2017-04-07 12:29:11 +0000      171 bytes  kubernetes/scc-broker-service.yaml</tspan>
+<tspan x="10" y="154">  8.  2017-04-07 12:29:11 +0000      580 bytes  kubernetes/scc-ingress.yaml</tspan>
+<tspan x="10" y="170">  9.  2017-04-07 12:29:11 +0000      538 bytes  kubernetes/scc-state-deployment.yaml</tspan>
+<tspan x="10" y="186"> 10.  2017-04-07 12:29:11 +0000      168 bytes  kubernetes/scc-state-service.yaml</tspan>
+<tspan x="10" y="202"> 11.  2017-04-07 12:29:11 +0000      597 bytes  kubernetes/socketcluster-deployment.yaml</tspan>
+<tspan x="10" y="218"> 12.  2017-04-07 12:29:11 +0000      180 bytes  kubernetes/socketcluster-service.yaml</tspan>
+<tspan x="10" y="234"> 13.  2017-04-07 12:29:11 +0000    10701 bytes  lib/scworker.js</tspan>
+<tspan x="10" y="250"> 14.  2017-04-07 12:29:11 +0000     5580 bytes  lib/workercluster.js</tspan>
+<tspan x="10" y="266"> 15.  2017-04-07 12:29:11 +0000     2831 bytes  package.json</tspan>
+<tspan x="10" y="282"> 16.  2017-04-07 12:29:11 +0000      246 bytes  sample/Dockerfile</tspan>
+<tspan x="10" y="298"> 17.  2017-04-07 12:29:11 +0000       68 bytes  sample/README.md</tspan>
+<tspan x="10" y="314"> 18.  2017-04-07 12:29:11 +0000     1058 bytes  sample/broker.js</tspan>
+<tspan x="10" y="330"> 19.  2017-04-07 12:29:11 +0000      687 bytes  sample/package.json</tspan>
+<tspan x="10" y="346"> 20.  2017-04-07 12:29:11 +0000    52690 bytes  sample/public/favicon.ico</tspan>
+<tspan x="10" y="362"> 21.  2017-04-07 12:29:11 +0000    19587 bytes  sample/public/img/logo.png</tspan>
+<tspan x="10" y="378"> 22.  2017-04-07 12:29:11 +0000     2667 bytes  sample/public/index.html</tspan>
+<tspan x="10" y="394"> 23.  2017-04-07 12:29:11 +0000     3936 bytes  sample/server.js</tspan>
+<tspan x="10" y="410"> 24.  2017-04-07 12:29:11 +0000     1470 bytes  sample/worker.js</tspan>
+<tspan x="10" y="426"> 25.  2017-04-07 12:29:11 +0000     6405 bytes  scc-guide.md</tspan>
+<tspan x="10" y="442"> 26.  2017-04-07 12:29:11 +0000     5450 bytes  socketcluster-protocol.md</tspan>
+<tspan x="10" y="458"> 27.  2017-04-07 12:29:11 +0000      357 bytes  test/README.md</tspan>
+<tspan x="10" y="474"> 28.  2017-04-07 12:29:11 +0000      126 bytes  test/external/balancer.js</tspan>
+<tspan x="10" y="490"> 29.  2017-04-07 12:29:11 +0000      118 bytes  test/external/broker.js</tspan>
+<tspan x="10" y="506"> 30.  2017-04-07 12:29:11 +0000     9013 bytes  test/external/index.js</tspan>
+<tspan x="10" y="522"> 31.  2017-04-07 12:29:11 +0000      462 bytes  test/external/server.js</tspan>
+<tspan x="10" y="538"> 32.  2017-04-07 12:29:11 +0000      984 bytes  test/external/worker.js</tspan>
+<tspan x="10" y="554"> 33.  2017-04-07 12:29:11 +0000      126 bytes  test/internal/balancer.js</tspan>
+<tspan x="10" y="570"> 34.  2017-04-07 12:29:11 +0000     1152 bytes  test/internal/broker.js</tspan>
+<tspan x="10" y="586"> 35.  2017-04-07 12:29:11 +0000     6355 bytes  test/internal/index.js</tspan>
+<tspan x="10" y="602"> 36.  2017-04-07 12:29:11 +0000      419 bytes  test/internal/server.js</tspan>
+<tspan x="10" y="618"> 37.  2017-04-07 12:29:11 +0000      207 bytes  test/internal/testsocketpath.js</tspan>
+<tspan x="10" y="634"> 38.  2017-04-07 12:29:11 +0000      296 bytes  test/internal/worker.js</tspan>
+</text>
+</svg>

@@ -1,0 +1,2695 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://socketcluster.io"
+
+    >socketcluster (v5.9.1)</a>
+</h1>
+<h4>SocketCluster - A Highly parallelized WebSocket server cluster to make the most of multi-core machines/instances.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socketcluster">module socketcluster</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster">
+            function <span class="apidocSignatureSpan">socketcluster.</span>SocketCluster
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker">
+            function <span class="apidocSignatureSpan">socketcluster.</span>scworker
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socketcluster.</span>SocketCluster.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socketcluster.</span>scworker.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socketcluster.SocketCluster">module socketcluster.SocketCluster</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.SocketCluster">
+            function <span class="apidocSignatureSpan">socketcluster.</span>SocketCluster
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socketcluster.SocketCluster.prototype">module socketcluster.SocketCluster.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._brokerEngineErrorHandler">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_brokerEngineErrorHandler
+            <span class="apidocSignatureSpan">(pid, error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._brokerErrorHandler">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_brokerErrorHandler
+            <span class="apidocSignatureSpan">(brokerPid, error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._capitaliseFirstLetter">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_capitaliseFirstLetter
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._cloneObject">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_cloneObject
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._getBrokerSocketName">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_getBrokerSocketName
+            <span class="apidocSignatureSpan">(brokerId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._getBrokerSocketPaths">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_getBrokerSocketPaths
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._handleWorkerClusterExit">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_handleWorkerClusterExit
+            <span class="apidocSignatureSpan">(errorCode)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._init">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_init
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._launchWorkerCluster">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_launchWorkerCluster
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._logDeploymentDetails">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_logDeploymentDetails
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._logObject">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_logObject
+            <span class="apidocSignatureSpan">(obj, objType, time)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._start">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._workerClusterErrorHandler">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerClusterErrorHandler
+            <span class="apidocSignatureSpan">(pid, error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._workerClusterReadyHandler">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerClusterReadyHandler
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._workerErrorHandler">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerErrorHandler
+            <span class="apidocSignatureSpan">(workerPid, error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._workerExitHandler">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerExitHandler
+            <span class="apidocSignatureSpan">(workerInfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._workerStartHandler">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerStartHandler
+            <span class="apidocSignatureSpan">(workerInfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype._workerWarningHandler">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerWarningHandler
+            <span class="apidocSignatureSpan">(workerPid, warning)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype.colorText">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>colorText
+            <span class="apidocSignatureSpan">(message, color)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype.errorHandler">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>errorHandler
+            <span class="apidocSignatureSpan">(err, origin)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype.killBrokers">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>killBrokers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype.killWorkers">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>killWorkers
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype.log">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>log
+            <span class="apidocSignatureSpan">(message, time)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype.sendToBroker">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>sendToBroker
+            <span class="apidocSignatureSpan">(brokerId, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype.sendToWorker">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>sendToWorker
+            <span class="apidocSignatureSpan">(workerId, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype.triggerInfo">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>triggerInfo
+            <span class="apidocSignatureSpan">(info, origin)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype.warningHandler">
+            function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>warningHandler
+            <span class="apidocSignatureSpan">(warning, origin)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socketcluster.scworker">module socketcluster.scworker</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.scworker">
+            function <span class="apidocSignatureSpan">socketcluster.</span>scworker
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socketcluster.scworker.prototype">module socketcluster.scworker.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype._calculateStatus">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>_calculateStatus
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype._httpRequestHandler">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>_httpRequestHandler
+            <span class="apidocSignatureSpan">(req, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype._init">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>_init
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype._start">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>_start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype._startServer">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>_startServer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.addMiddleware">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>addMiddleware
+            <span class="apidocSignatureSpan">(type, middleware)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.close">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>close
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.errorHandler">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>errorHandler
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.getHTTPServer">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>getHTTPServer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.getSCServer">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>getSCServer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.getSocketPath">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>getSocketPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.getSocketURL">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>getSocketURL
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.getStatus">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>getStatus
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.handleMasterEvent">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>handleMasterEvent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.handleMasterMessage">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>handleMasterMessage
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.open">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.removeMiddleware">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>removeMiddleware
+            <span class="apidocSignatureSpan">(type, middleware)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.sendToMaster">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>sendToMaster
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.setAuthEngine">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>setAuthEngine
+            <span class="apidocSignatureSpan">(authEngine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.setCodecEngine">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>setCodecEngine
+            <span class="apidocSignatureSpan">(codecEngine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.scworker.prototype.warningHandler">
+            function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>warningHandler
+            <span class="apidocSignatureSpan">(warning)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socketcluster" id="apidoc.module.socketcluster">module socketcluster</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster" id="apidoc.element.socketcluster.SocketCluster">
+        function <span class="apidocSignatureSpan">socketcluster.</span>SocketCluster
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SocketCluster = function (options) {
+  var self = this;
+  if (socketClusterSingleton) {
+    var doubleInstantiationError = new Error(&#x27;The SocketCluster master object is a singleton - It can only be instantiated once
+per process.&#x27;);
+    doubleInstantiationError.name = &#x27;DoubleInstantiationError&#x27;;
+    throw doubleInstantiationError;
+  }
+  socketClusterSingleton = self;
+
+  self.EVENT_FAIL = &#x27;fail&#x27;;
+  self.EVENT_WARNING = &#x27;warning&#x27;;
+  self.EVENT_INFO = &#x27;info&#x27;;
+  self.EVENT_READY = &#x27;ready&#x27;;
+  self.EVENT_WORKER_START = &#x27;workerStart&#x27;;
+  self.EVENT_WORKER_EXIT = &#x27;workerExit&#x27;;
+
+  self._errorAnnotations = {
+    &#x27;EADDRINUSE&#x27;: &#x27;Failed to bind to a port because it was already used by another process.&#x27;
+  };
+
+  self._errorDomain = domain.create();
+  self._errorDomain.on(&#x27;error&#x27;, function (err) {
+    self.errorHandler(err, {
+      type: &#x27;master&#x27;
+    });
+  });
+  self._errorDomain.add(self);
+
+  self._errorDomain.run(function () {
+    self._init(options);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker" id="apidoc.element.socketcluster.scworker">
+        function <span class="apidocSignatureSpan">socketcluster.</span>scworker
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scworker = function (options) {
+  var self = this;
+
+  this.EVENT_ERROR = &#x27;error&#x27;;
+  this.EVENT_WARNING = &#x27;warning&#x27;;
+  this.EVENT_EXIT = &#x27;exit&#x27;;
+  this.EVENT_READY = &#x27;ready&#x27;;
+  this.EVENT_CONNECTION = &#x27;connection&#x27;;
+
+  this.MIDDLEWARE_START = &#x27;start&#x27;;
+
+  this.type = &#x27;worker&#x27;;
+
+  this._errorDomain = domain.create();
+  this._errorDomain.on(&#x27;error&#x27;, function () {
+    self.errorHandler.apply(self, arguments);
+  });
+
+  this.start = this._errorDomain.bind(this._start);
+  this._errorDomain.run(function () {
+    self._init(options);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socketcluster.SocketCluster" id="apidoc.module.socketcluster.SocketCluster">module socketcluster.SocketCluster</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.SocketCluster" id="apidoc.element.socketcluster.SocketCluster.SocketCluster">
+        function <span class="apidocSignatureSpan">socketcluster.</span>SocketCluster
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SocketCluster = function (options) {
+  var self = this;
+  if (socketClusterSingleton) {
+    var doubleInstantiationError = new Error(&#x27;The SocketCluster master object is a singleton - It can only be instantiated once
+per process.&#x27;);
+    doubleInstantiationError.name = &#x27;DoubleInstantiationError&#x27;;
+    throw doubleInstantiationError;
+  }
+  socketClusterSingleton = self;
+
+  self.EVENT_FAIL = &#x27;fail&#x27;;
+  self.EVENT_WARNING = &#x27;warning&#x27;;
+  self.EVENT_INFO = &#x27;info&#x27;;
+  self.EVENT_READY = &#x27;ready&#x27;;
+  self.EVENT_WORKER_START = &#x27;workerStart&#x27;;
+  self.EVENT_WORKER_EXIT = &#x27;workerExit&#x27;;
+
+  self._errorAnnotations = {
+    &#x27;EADDRINUSE&#x27;: &#x27;Failed to bind to a port because it was already used by another process.&#x27;
+  };
+
+  self._errorDomain = domain.create();
+  self._errorDomain.on(&#x27;error&#x27;, function (err) {
+    self.errorHandler(err, {
+      type: &#x27;master&#x27;
+    });
+  });
+  self._errorDomain.add(self);
+
+  self._errorDomain.run(function () {
+    self._init(options);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socketcluster.SocketCluster.prototype" id="apidoc.module.socketcluster.SocketCluster.prototype">module socketcluster.SocketCluster.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._brokerEngineErrorHandler" id="apidoc.element.socketcluster.SocketCluster.prototype._brokerEngineErrorHandler">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_brokerEngineErrorHandler
+        <span class="apidocSignatureSpan">(pid, error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_brokerEngineErrorHandler = function (pid, error) {
+  if (typeof error == &#x27;string&#x27;) {
+    error = new BrokerError(error);
+  }
+  this.errorHandler(error, {
+    type: &#x27;BrokerEngine&#x27;,
+    pid: pid
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  appInitControllerPath: self._paths.appInitControllerPath
+});
+
+self._brokerEngineServer.on(&#x27;error&#x27;, function (err) {
+  if (err.brokerPid) {
+    self._brokerErrorHandler(err.brokerPid, err);
+  } else {
+    self.<span class="apidocCodeKeywordSpan">_brokerEngineErrorHandler</span>(err.pid, err);
+  }
+});
+
+self._brokerEngineServer.on(&#x27;ready&#x27;, brokerEngineServerReady);
+
+self._brokerEngineServer.on(&#x27;brokerMessage&#x27;, function (brokerId, data) {
+  self.emit(&#x27;brokerMessage&#x27;, brokerId, data);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._brokerErrorHandler" id="apidoc.element.socketcluster.SocketCluster.prototype._brokerErrorHandler">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_brokerErrorHandler
+        <span class="apidocSignatureSpan">(brokerPid, error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_brokerErrorHandler = function (brokerPid, error) {
+  if (typeof error == &#x27;string&#x27;) {
+    error = new BrokerError(error);
+  }
+  this.errorHandler(error, {
+    type: &#x27;Broker&#x27;,
+    pid: brokerPid
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  brokerOptions: self.options,
+  appBrokerControllerPath: self._paths.appBrokerControllerPath,
+  appInitControllerPath: self._paths.appInitControllerPath
+});
+
+self._brokerEngineServer.on(&#x27;error&#x27;, function (err) {
+  if (err.brokerPid) {
+    self.<span class="apidocCodeKeywordSpan">_brokerErrorHandler</span>(err.brokerPid, err);
+  } else {
+    self._brokerEngineErrorHandler(err.pid, err);
+  }
+});
+
+self._brokerEngineServer.on(&#x27;ready&#x27;, brokerEngineServerReady);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._capitaliseFirstLetter" id="apidoc.element.socketcluster.SocketCluster.prototype._capitaliseFirstLetter">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_capitaliseFirstLetter
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_capitaliseFirstLetter = function (str) {
+  if (str == null) {
+    str = &#x27;&#x27;;
+  }
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (!obj.origin.type) {
+    obj.origin.type = &#x27;Undefined&#x27;;
+  }
+  var output = obj.stack || obj.message || obj;
+
+  var logMessage;
+  if (obj.origin.pid == null) {
+    logMessage = &#x27;Origin: &#x27; + this.<span class="apidocCodeKeywordSpan">_capitaliseFirstLetter</span>(obj.origin.type) + &#
+x27;\n&#x27; +
+      &#x27;   [&#x27; + objType + &#x27;] &#x27; + output;
+  } else {
+    logMessage = &#x27;Origin: &#x27; + this._capitaliseFirstLetter(obj.origin.type) + &#x27; (PID &#x27; + obj.origin.pid + &#x27
+;)\n&#x27; +
+      &#x27;   [&#x27; + objType + &#x27;] &#x27; + output;
+  }
+  this.log(logMessage, time);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._cloneObject" id="apidoc.element.socketcluster.SocketCluster.prototype._cloneObject">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_cloneObject
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_cloneObject = function (object) {
+  var clone = {};
+  for (var i in object) {
+    if (object.hasOwnProperty(i)) {
+      clone[i] = object[i];
+    }
+  }
+  return clone;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  execOptions.execArgv.push(&#x27;--debug-port=&#x27; + inspectPort);
+  execOptions.execArgv.push(&#x27;--inspect=&#x27; + inspectPort);
+}
+
+this._workerCluster = fork(__dirname + &#x27;/lib/workercluster.js&#x27;, process.argv.slice(2), execOptions);
+
+var workerOpts = this.<span class="apidocCodeKeywordSpan">_cloneObject</span>(this.options);
+workerOpts.paths = this._paths;
+workerOpts.sourcePort = this.options.port;
+workerOpts.workerCount = this.options.workers;
+workerOpts.brokers = this._getBrokerSocketPaths();
+workerOpts.secretKey = this.options.secretKey;
+workerOpts.authKey = this.options.authKey;
+workerOpts.authPrivateKey = this.options.authPrivateKey;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._getBrokerSocketName" id="apidoc.element.socketcluster.SocketCluster.prototype._getBrokerSocketName">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_getBrokerSocketName
+        <span class="apidocSignatureSpan">(brokerId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getBrokerSocketName = function (brokerId) {
+  return &#x27;b&#x27; + brokerId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+SocketCluster.prototype._getBrokerSocketName = function (brokerId) {
+return &#x27;b&#x27; + brokerId;
+};
+
+SocketCluster.prototype._getBrokerSocketPaths = function () {
+var socketPaths = [];
+for (var i = 0; i &#x3c; this.options.brokers; i++) {
+  socketPaths.push(this._socketDirPath + this.<span class="apidocCodeKeywordSpan">_getBrokerSocketName</span>(i));
+}
+return socketPaths;
+};
+
+SocketCluster.prototype._capitaliseFirstLetter = function (str) {
+if (str == null) {
+  str = &#x27;&#x27;;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._getBrokerSocketPaths" id="apidoc.element.socketcluster.SocketCluster.prototype._getBrokerSocketPaths">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_getBrokerSocketPaths
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getBrokerSocketPaths = function () {
+  var socketPaths = [];
+  for (var i = 0; i &#x3c; this.options.brokers; i++) {
+    socketPaths.push(this._socketDirPath + this._getBrokerSocketName(i));
+  }
+  return socketPaths;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+this._workerCluster = fork(__dirname + &#x27;/lib/workercluster.js&#x27;, process.argv.slice(2), execOptions);
+
+var workerOpts = this._cloneObject(this.options);
+workerOpts.paths = this._paths;
+workerOpts.sourcePort = this.options.port;
+workerOpts.workerCount = this.options.workers;
+workerOpts.brokers = this.<span class="apidocCodeKeywordSpan">_getBrokerSocketPaths</span>();
+workerOpts.secretKey = this.options.secretKey;
+workerOpts.authKey = this.options.authKey;
+workerOpts.authPrivateKey = this.options.authPrivateKey;
+workerOpts.authPublicKey = this.options.authPublicKey;
+workerOpts.authDefaultExpiry = this.options.authDefaultExpiry;
+workerOpts.authAlgorithm = this.options.authAlgorithm;
+workerOpts.authSignAsync = this.options.authSignAsync;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._handleWorkerClusterExit" id="apidoc.element.socketcluster.SocketCluster.prototype._handleWorkerClusterExit">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_handleWorkerClusterExit
+        <span class="apidocSignatureSpan">(errorCode)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_handleWorkerClusterExit = function (errorCode) {
+  var message = &#x27;workerCluster exited with code: &#x27; + errorCode;
+  if (errorCode == 0) {
+    this.log(message);
+  } else {
+    var error = new ProcessExitError(message, errorCode);
+    this.errorHandler(error, {
+      type: &#x27;workerCluster&#x27;
+    });
+  }
+  this._launchWorkerCluster();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._init" id="apidoc.element.socketcluster.SocketCluster.prototype._init">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_init
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_init = function (options) {
+  var self = this;
+
+  var backslashRegex = /\\/g;
+  var appDirPath = path.dirname(require.main.filename).replace(backslashRegex, &#x27;/&#x27;);
+
+  self.options = {
+    port: 8000,
+    workers: null,
+    brokers: null,
+    appName: null,
+    instanceId: null,
+    secretKey: null,
+    authKey: null,
+    authPrivateKey: null,
+    authPublicKey: null,
+    authDefaultExpiry: 86400,
+    authAlgorithm: null,
+    authSignAsync: false,
+    authVerifyAsync: true,
+    crashWorkerOnError: true,
+    rebootWorkerOnCrash: true,
+    killWorkerMemoryThreshold: null,
+    protocol: &#x27;http&#x27;,
+    protocolOptions: null,
+    logLevel: 2,
+    handshakeTimeout: 10000,
+    ackTimeout: 10000,
+    pingInterval: 8000,
+    pingTimeout: 20000,
+    origins: &#x27;*:*&#x27;,
+    socketChannelLimit: 1000,
+    workerStatusInterval: 10000,
+    processTermTimeout: 10000,
+    propagateErrors: true,
+    propagateWarnings: true,
+    middlewareEmitWarnings: true,
+    host: null,
+    tcpSynBacklog: null,
+    workerController: null,
+    brokerController: null,
+    initController: null,
+    rebootOnSignal: true,
+    downgradeToUser: false,
+    path: &#x27;/socketcluster/&#x27;,
+    socketRoot: null,
+    schedulingPolicy: null,
+    allowClientPublish: true,
+    defaultWorkerDebugPort: 5858,
+    defaultBrokerDebugPort: 6858,
+    httpServerModule: null,
+    pubSubBatchDuration: null,
+    environment: &#x27;dev&#x27;,
+    killMasterOnSignal: false,
+    wsEngine: &#x27;uws&#x27;,
+    brokerEngine: &#x27;sc-broker-cluster&#x27;
+  };
+
+  self._active = false;
+  self._workerCluster = null;
+
+  self._colorCodes = {
+    red: 31,
+    green: 32,
+    yellow: 33
+  };
+
+  for (var i in options) {
+    if (options.hasOwnProperty(i)) {
+      self.options[i] = options[i];
+    }
+  }
+
+  // Make sure there is always a trailing slash in WS path
+  self.options.path = self.options.path.replace(/\/?$/, &#x27;/&#x27;);
+
+  var maxTimeout = Math.pow(2, 31) - 1;
+
+  var verifyDuration = function (propertyName) {
+    if (self.options[propertyName] &#x3e; maxTimeout) {
+      throw new InvalidOptionsError(&#x27;The &#x27; + propertyName +
+        &#x27; value provided exceeded the maximum amount allowed&#x27;);
+    }
+  };
+
+  verifyDuration(&#x27;ackTimeout&#x27;);
+  verifyDuration(&#x27;pingInterval&#x27;);
+  verifyDuration(&#x27;pingTimeout&#x27;);
+  verifyDuration(&#x27;workerStatusInterval&#x27;);
+  verifyDuration(&#x27;processTermTimeout&#x27;);
+
+  if (self.options.appName == null) {
+    self.options.appName = uuid.v4();
+  }
+
+  if (self.options.workerController == null) {
+    throw new InvalidOptionsError(&#x22;Compulsory option &#x27;workerController&#x27; was not specified &#x22; +
+      &#x22;- It needs to be a path to a JavaScript file which will act as the &#x22; +
+      &#x22;boot controller for each worker in the cluster&#x22;);
+  }
+
+  self._paths = {
+    appDirPath: appDirPath,
+    statusURL: &#x27;/~status&#x27;,
+    appWorkerControllerPath: path.resolve(self.options.workerController)
+  };
+
+  if (self.options.initController) {
+      self._paths.appInitControllerPath = path.resolve(self.options.initController);
+  } else {
+      self._paths.appInitControllerPath = null;
+  }
+
+  if (/\.js$/.test(self.options.wsEngine)) {
+    self._paths.wsEnginePath = path.resolve(self.options.wsEngine);
+  } else {
+    self._paths.wsEnginePath = self.options.wsEngine;
+  }
+
+  var pathHasher = crypto.createHash(&#x27;md5&#x27;);
+  pathHasher.update(self._paths.appDirPath, &#x27;utf8&#x27;);
+  var pathHash = pathHasher.digest(&#x27;hex&#x27;).substr(0, 10);
+  // Trimp it because some OSes (e.g. OSX) do not like long path names for domain sockets.
+  var shortAppName = self.options.appName.substr(0, 13);
+
+  if (process.platform == &#x27;win32&#x27;) {
+    if (self.options.socketRoot) {
+      self._socketDirPath = self.options.socketRoot + &#x27;_&#x27;;
+    } else {
+      self._socketDirPath = &#x27;\\\\.\\pipe\\socketcluster_&#x27; + shortAppName + &#x27;_&#x27; + pathHash + &#x27;_&#x27;;
+    }
+  } else {
+    var socketDir, socketParentDir;
+    if (self.options.socketRoot) {
+      socketDir = self.options.socketRoot.replace(/\/$/, &#x27;&#x27;) + &#x27;/&#x27;;
+    } else {
+      socketParentDir = os.tmpdir() + &#x27;/socketcluster/&#x27;;
+      socketDir = socketParentDir + shortAppName + &#x27;_&#x27; + pathHash + &#x27;/&#x27;;
+    }
+    if (fs.existsSync(socketDir)) {
+      try {
+        fs.removeSync(soc ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  self.errorHandler(err, {
+    type: &#x27;master&#x27;
+  });
+});
+self._errorDomain.add(self);
+
+self._errorDomain.run(function () {
+  self.<span class="apidocCodeKeywordSpan">_init</span>(options);
+});
+};
+
+SocketCluster.prototype = Object.create(EventEmitter.prototype);
+
+SocketCluster.prototype._init = function (options) {
+var self = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._launchWorkerCluster" id="apidoc.element.socketcluster.SocketCluster.prototype._launchWorkerCluster">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_launchWorkerCluster
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_launchWorkerCluster = function () {
+  var self = this;
+
+  var debugPort, inspectPort;
+
+  // Workers should not inherit the master --debug argument
+  // because they have their own --debug-workers option.
+  var execOptions = {
+    execArgv: process.execArgv.filter(function (arg) {
+      return arg != &#x27;--debug&#x27; &#x26;&#x26; arg != &#x27;--debug-brk&#x27; &#x26;&#x26; arg != &#x27;--inspect&#x27;;
+    })
+  };
+
+  if (argv[&#x27;debug-workers&#x27;]) {
+    if (argv[&#x27;debug-workers&#x27;] == true) {
+      debugPort = this.options.defaultWorkerDebugPort;
+    } else {
+      debugPort = argv[&#x27;debug-workers&#x27;];
+    }
+    execOptions.execArgv.push(&#x27;--debug=&#x27; + debugPort);
+  }
+
+  if (argv[&#x27;inspect-workers&#x27;]) {
+    if (argv[&#x27;inspect-workers&#x27;] == true) {
+      inspectPort = this.options.defaultWorkerDebugPort;
+    } else {
+      inspectPort = argv[&#x27;inspect-workers&#x27;];
+    }
+    execOptions.execArgv.push(&#x27;--debug-port=&#x27; + inspectPort);
+    execOptions.execArgv.push(&#x27;--inspect=&#x27; + inspectPort);
+  }
+
+  this._workerCluster = fork(__dirname + &#x27;/lib/workercluster.js&#x27;, process.argv.slice(2), execOptions);
+
+  var workerOpts = this._cloneObject(this.options);
+  workerOpts.paths = this._paths;
+  workerOpts.sourcePort = this.options.port;
+  workerOpts.workerCount = this.options.workers;
+  workerOpts.brokers = this._getBrokerSocketPaths();
+  workerOpts.secretKey = this.options.secretKey;
+  workerOpts.authKey = this.options.authKey;
+  workerOpts.authPrivateKey = this.options.authPrivateKey;
+  workerOpts.authPublicKey = this.options.authPublicKey;
+  workerOpts.authDefaultExpiry = this.options.authDefaultExpiry;
+  workerOpts.authAlgorithm = this.options.authAlgorithm;
+  workerOpts.authSignAsync = this.options.authSignAsync;
+  workerOpts.authVerifyAsync = this.options.authVerifyAsync;
+
+  if (typeof workerOpts.schedulingPolicy == &#x27;string&#x27;) {
+    if (workerOpts.schedulingPolicy == &#x27;rr&#x27;) {
+      workerOpts.schedulingPolicy = cluster.SCHED_RR;
+    } else if (workerOpts.schedulingPolicy == &#x27;none&#x27;) {
+      workerOpts.schedulingPolicy = cluster.SCHED_NONE;
+    }
+  }
+
+  this._workerCluster.send({
+    type: &#x27;init&#x27;,
+    data: workerOpts
+  });
+
+  this._workerCluster.on(&#x27;message&#x27;, function workerHandler(m) {
+    if (m.type == &#x27;error&#x27;) {
+      var error = scErrors.hydrateError(m.data.error);
+      if (m.data.workerPid) {
+        self._workerErrorHandler(m.data.workerPid, error);
+      } else {
+        self._workerClusterErrorHandler(m.data.pid, error);
+      }
+    } else if (m.type == &#x27;warning&#x27;) {
+      var warning = scErrors.hydrateError(m.data.error);
+      self._workerWarningHandler(m.data.workerPid, warning);
+    } else if (m.type == &#x27;ready&#x27;) {
+      self._workerClusterReadyHandler();
+    } else if (m.type == &#x27;workerStart&#x27;) {
+      self._workerStartHandler(m.data);
+    } else if (m.type == &#x27;workerExit&#x27;) {
+      self._workerExitHandler(m.data);
+    } else if (m.type == &#x27;workerMessage&#x27;) {
+      self.emit(&#x27;workerMessage&#x27;, m.workerId, m.data);
+    }
+  });
+
+  this._workerCluster.on(&#x27;exit&#x27;, this._handleWorkerClusterExit.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.log(message);
+} else {
+  var error = new ProcessExitError(message, errorCode);
+  this.errorHandler(error, {
+    type: &#x27;workerCluster&#x27;
+  });
+}
+this.<span class="apidocCodeKeywordSpan">_launchWorkerCluster</span>();
+};
+
+SocketCluster.prototype._launchWorkerCluster = function () {
+var self = this;
+
+var debugPort, inspectPort;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._logDeploymentDetails" id="apidoc.element.socketcluster.SocketCluster.prototype._logDeploymentDetails">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_logDeploymentDetails
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_logDeploymentDetails = function () {
+  if (this.options.logLevel &#x3e; 0) {
+    console.log(&#x27;   &#x27; + this.colorText(&#x27;[Active]&#x27;, &#x27;green&#x27;) + &#x27; SocketCluster started&#x27;);
+    console.log(&#x27;            Version: &#x27; + pkg.version);
+    console.log(&#x27;            Environment: &#x27; + this.options.environment);
+    console.log(&#x27;            WebSocket engine: &#x27; + this.options.wsEngine);
+    console.log(&#x27;            Port: &#x27; + this.options.port);
+    console.log(&#x27;            Master PID: &#x27; + process.pid);
+    console.log(&#x27;            Worker count: &#x27; + this.options.workers);
+    console.log(&#x27;            Broker count: &#x27; + this.options.brokers);
+    console.log();
+  }
+  this.emit(this.EVENT_READY);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      if (self.options.killMasterOnSignal) {
+        process.exit();
+      }
+    });
+  }
+
+  this._active = true;
+  this.<span class="apidocCodeKeywordSpan">_logDeploymentDetails</span>();
+}
+};
+
+SocketCluster.prototype._workerExitHandler = function (workerInfo) {
+if (this.options.logLevel &#x3e; 0) {
+  var message = &#x27;Worker &#x27; + workerInfo.id + &#x27; exited - Exit code: &#x27; + workerInfo.code;
+  if (workerInfo.signal) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._logObject" id="apidoc.element.socketcluster.SocketCluster.prototype._logObject">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_logObject
+        <span class="apidocSignatureSpan">(obj, objType, time)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_logObject = function (obj, objType, time) {
+  if (!objType) {
+    objType = &#x27;Error&#x27;;
+  }
+  if (!obj.origin) {
+    obj.origin = {};
+  }
+  if (!obj.origin.type) {
+    obj.origin.type = &#x27;Undefined&#x27;;
+  }
+  var output = obj.stack || obj.message || obj;
+
+  var logMessage;
+  if (obj.origin.pid == null) {
+    logMessage = &#x27;Origin: &#x27; + this._capitaliseFirstLetter(obj.origin.type) + &#x27;\n&#x27; +
+      &#x27;   [&#x27; + objType + &#x27;] &#x27; + output;
+  } else {
+    logMessage = &#x27;Origin: &#x27; + this._capitaliseFirstLetter(obj.origin.type) + &#x27; (PID &#x27; + obj.origin.pid + &#x27;)\n&#x27; +
+      &#x27;   [&#x27; + objType + &#x27;] &#x27; + output;
+  }
+  this.log(logMessage, time);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  err.stack += &#x27;\n    &#x27; + this.colorText(&#x27;!!&#x27;, &#x27;red&#x27;) + &#x27; &#x27; + annotation;
+}
+
+err.origin = origin;
+err.time = Date.now();
+this.emit(this.EVENT_FAIL, err);
+
+this.<span class="apidocCodeKeywordSpan">_logObject</span>(err, &#x27;Error&#x27;);
+};
+
+SocketCluster.prototype.warningHandler = function (warning, origin) {
+if (!(warning instanceof Object)) {
+  // If a string (or null...)
+  warning = new UnknownError(warning);
+} else if (warning.stack == null) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._start" id="apidoc.element.socketcluster.SocketCluster.prototype._start">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_start = function () {
+  var self = this;
+
+  if (self.options.secretKey == null) {
+    self.options.secretKey = crypto.randomBytes(32).toString(&#x27;hex&#x27;);
+  }
+  if (this.options.authKey == null &#x26;&#x26; this.options.authPrivateKey == null &#x26;&#x26; this.options.authPublicKey == null) {
+    this.options.authKey = crypto.randomBytes(32).toString(&#x27;hex&#x27;);
+  }
+  if (self.options.instanceId == null) {
+    self.options.instanceId = uuid.v4();
+  }
+
+  self._active = false;
+
+  var brokerEngineServerReady = function () {
+    self._brokerEngineServer.removeListener(&#x27;ready&#x27;, brokerEngineServerReady);
+    self._launchWorkerCluster();
+  };
+
+  var launchBrokerEngine = function () {
+    var brokerDebugPort = argv[&#x27;debug-brokers&#x27;];
+    if (brokerDebugPort == true) {
+      brokerDebugPort = self.options.defaultBrokerDebugPort;
+    }
+
+    var brokerInspectPort = argv[&#x27;inspect-brokers&#x27;];
+    if (brokerInspectPort == true) {
+      brokerInspectPort = self.options.defaultBrokerDebugPort;
+    }
+
+    self._brokerEngineServer = new self._brokerEngine.Server({
+      brokers: self._getBrokerSocketPaths(),
+      debug: brokerDebugPort,
+      inspect: brokerInspectPort,
+      instanceId: self.options.instanceId,
+      secretKey: self.options.secretKey,
+      expiryAccuracy: self._dataExpiryAccuracy,
+      downgradeToUser: self.options.downgradeToUser,
+      processTermTimeout: self.options.processTermTimeout,
+      brokerOptions: self.options,
+      appBrokerControllerPath: self._paths.appBrokerControllerPath,
+      appInitControllerPath: self._paths.appInitControllerPath
+    });
+
+    self._brokerEngineServer.on(&#x27;error&#x27;, function (err) {
+      if (err.brokerPid) {
+        self._brokerErrorHandler(err.brokerPid, err);
+      } else {
+        self._brokerEngineErrorHandler(err.pid, err);
+      }
+    });
+
+    self._brokerEngineServer.on(&#x27;ready&#x27;, brokerEngineServerReady);
+
+    self._brokerEngineServer.on(&#x27;brokerMessage&#x27;, function (brokerId, data) {
+      self.emit(&#x27;brokerMessage&#x27;, brokerId, data);
+    });
+  };
+
+  launchBrokerEngine();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  process.stdin.resume();
+  process.stdin.setEncoding(&#x27;utf8&#x27;);
+}
+
+if (self.options.downgradeToUser &#x26;&#x26; process.platform != &#x27;win32&#x27;) {
+  if (typeof self.options.downgradeToUser == &#x27;number&#x27;) {
+    fs.chownSync(self._socketDirPath, self.options.downgradeToUser, 0);
+    self.<span class="apidocCodeKeywordSpan">_start</span>();
+  } else {
+    uidNumber(self.options.downgradeToUser, function (err, uid, gid) {
+      if (err) {
+        throw new InvalidActionError(&#x27;Failed to downgrade to user &#x22;&#x27; + self.options.downgradeToUser + &#x27;&#x22
+; - &#x27; + err);
+      } else {
+        fs.chownSync(self._socketDirPath, uid, gid);
+        self._start();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._workerClusterErrorHandler" id="apidoc.element.socketcluster.SocketCluster.prototype._workerClusterErrorHandler">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerClusterErrorHandler
+        <span class="apidocSignatureSpan">(pid, error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_workerClusterErrorHandler = function (pid, error) {
+  this.errorHandler(error, {
+    type: &#x27;WorkerCluster&#x27;,
+    pid: pid
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  this._workerCluster.on(&#x27;message&#x27;, function workerHandler(m) {
+if (m.type == &#x27;error&#x27;) {
+  var error = scErrors.hydrateError(m.data.error);
+  if (m.data.workerPid) {
+    self._workerErrorHandler(m.data.workerPid, error);
+  } else {
+    self.<span class="apidocCodeKeywordSpan">_workerClusterErrorHandler</span>(m.data.pid, error);
+  }
+} else if (m.type == &#x27;warning&#x27;) {
+  var warning = scErrors.hydrateError(m.data.error);
+  self._workerWarningHandler(m.data.workerPid, warning);
+} else if (m.type == &#x27;ready&#x27;) {
+  self._workerClusterReadyHandler();
+} else if (m.type == &#x27;workerStart&#x27;) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._workerClusterReadyHandler" id="apidoc.element.socketcluster.SocketCluster.prototype._workerClusterReadyHandler">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerClusterReadyHandler
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_workerClusterReadyHandler = function () {
+  var self = this;
+
+  if (!this._active) {
+    if (this.options.rebootOnSignal) {
+      process.on(&#x27;SIGUSR2&#x27;, function () {
+        var warning;
+        var killOptions = {};
+        if (self.options.environment == &#x27;dev&#x27;) {
+          warning = &#x27;Master received SIGUSR2 signal - Shutting down all workers immediately&#x27;;
+          killOptions.immediate = true;
+        } else {
+          warning = &#x27;Master received SIGUSR2 signal - Shutting down all workers in accordance with processTermTimeout&#x27;;
+        }
+        self.warningHandler(warning, {type: &#x27;master&#x27;});
+        self.killWorkers(killOptions);
+        if (self.options.killMasterOnSignal) {
+          process.exit();
+        }
+      });
+    }
+
+    this._active = true;
+    this._logDeploymentDetails();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  } else {
+    self._workerClusterErrorHandler(m.data.pid, error);
+  }
+} else if (m.type == &#x27;warning&#x27;) {
+  var warning = scErrors.hydrateError(m.data.error);
+  self._workerWarningHandler(m.data.workerPid, warning);
+} else if (m.type == &#x27;ready&#x27;) {
+  self.<span class="apidocCodeKeywordSpan">_workerClusterReadyHandler</span>();
+} else if (m.type == &#x27;workerStart&#x27;) {
+  self._workerStartHandler(m.data);
+} else if (m.type == &#x27;workerExit&#x27;) {
+  self._workerExitHandler(m.data);
+} else if (m.type == &#x27;workerMessage&#x27;) {
+  self.emit(&#x27;workerMessage&#x27;, m.workerId, m.data);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._workerErrorHandler" id="apidoc.element.socketcluster.SocketCluster.prototype._workerErrorHandler">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerErrorHandler
+        <span class="apidocSignatureSpan">(workerPid, error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_workerErrorHandler = function (workerPid, error) {
+  this.errorHandler(error, {
+    type: &#x27;Worker&#x27;,
+    pid: workerPid
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  data: workerOpts
+});
+
+this._workerCluster.on(&#x27;message&#x27;, function workerHandler(m) {
+  if (m.type == &#x27;error&#x27;) {
+    var error = scErrors.hydrateError(m.data.error);
+    if (m.data.workerPid) {
+      self.<span class="apidocCodeKeywordSpan">_workerErrorHandler</span>(m.data.workerPid, error);
+    } else {
+      self._workerClusterErrorHandler(m.data.pid, error);
+    }
+  } else if (m.type == &#x27;warning&#x27;) {
+    var warning = scErrors.hydrateError(m.data.error);
+    self._workerWarningHandler(m.data.workerPid, warning);
+  } else if (m.type == &#x27;ready&#x27;) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._workerExitHandler" id="apidoc.element.socketcluster.SocketCluster.prototype._workerExitHandler">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerExitHandler
+        <span class="apidocSignatureSpan">(workerInfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_workerExitHandler = function (workerInfo) {
+  if (this.options.logLevel &#x3e; 0) {
+    var message = &#x27;Worker &#x27; + workerInfo.id + &#x27; exited - Exit code: &#x27; + workerInfo.code;
+    if (workerInfo.signal) {
+      message += &#x27;, signal: &#x27; + workerInfo.signal;
+    }
+    this.log(message);
+  }
+  this.emit(this.EVENT_WORKER_EXIT, workerInfo);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      var warning = scErrors.hydrateError(m.data.error);
+      self._workerWarningHandler(m.data.workerPid, warning);
+    } else if (m.type == &#x27;ready&#x27;) {
+      self._workerClusterReadyHandler();
+    } else if (m.type == &#x27;workerStart&#x27;) {
+      self._workerStartHandler(m.data);
+    } else if (m.type == &#x27;workerExit&#x27;) {
+      self.<span class="apidocCodeKeywordSpan">_workerExitHandler</span>(m.data);
+    } else if (m.type == &#x27;workerMessage&#x27;) {
+      self.emit(&#x27;workerMessage&#x27;, m.workerId, m.data);
+    }
+  });
+
+  this._workerCluster.on(&#x27;exit&#x27;, this._handleWorkerClusterExit.bind(this));
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._workerStartHandler" id="apidoc.element.socketcluster.SocketCluster.prototype._workerStartHandler">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerStartHandler
+        <span class="apidocSignatureSpan">(workerInfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_workerStartHandler = function (workerInfo) {
+  if (this._active &#x26;&#x26; this.options.logLevel &#x3e; 0 &#x26;&#x26; workerInfo.respawn) {
+    this.log(&#x27;Worker &#x27; + workerInfo.id + &#x27; was respawned&#x27;);
+  }
+  this.emit(this.EVENT_WORKER_START, workerInfo);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+  } else if (m.type == &#x27;warning&#x27;) {
+    var warning = scErrors.hydrateError(m.data.error);
+    self._workerWarningHandler(m.data.workerPid, warning);
+  } else if (m.type == &#x27;ready&#x27;) {
+    self._workerClusterReadyHandler();
+  } else if (m.type == &#x27;workerStart&#x27;) {
+    self.<span class="apidocCodeKeywordSpan">_workerStartHandler</span>(m.data);
+  } else if (m.type == &#x27;workerExit&#x27;) {
+    self._workerExitHandler(m.data);
+  } else if (m.type == &#x27;workerMessage&#x27;) {
+    self.emit(&#x27;workerMessage&#x27;, m.workerId, m.data);
+  }
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype._workerWarningHandler" id="apidoc.element.socketcluster.SocketCluster.prototype._workerWarningHandler">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>_workerWarningHandler
+        <span class="apidocSignatureSpan">(workerPid, warning)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_workerWarningHandler = function (workerPid, warning) {
+  var origin = {
+    type: &#x27;Worker&#x27;,
+    pid: workerPid
+  };
+  this.warningHandler(warning, origin);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (m.data.workerPid) {
+    self._workerErrorHandler(m.data.workerPid, error);
+  } else {
+    self._workerClusterErrorHandler(m.data.pid, error);
+  }
+} else if (m.type == &#x27;warning&#x27;) {
+  var warning = scErrors.hydrateError(m.data.error);
+  self.<span class="apidocCodeKeywordSpan">_workerWarningHandler</span>(m.data.workerPid, warning);
+} else if (m.type == &#x27;ready&#x27;) {
+  self._workerClusterReadyHandler();
+} else if (m.type == &#x27;workerStart&#x27;) {
+  self._workerStartHandler(m.data);
+} else if (m.type == &#x27;workerExit&#x27;) {
+  self._workerExitHandler(m.data);
+} else if (m.type == &#x27;workerMessage&#x27;) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype.colorText" id="apidoc.element.socketcluster.SocketCluster.prototype.colorText">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>colorText
+        <span class="apidocSignatureSpan">(message, color)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">colorText = function (message, color) {
+  if (this._colorCodes[color]) {
+    return &#x27;\x1b[0;&#x27; + this._colorCodes[color] + &#x27;m&#x27; + message + &#x27;\x1b[0m&#x27;;
+  } else if (color) {
+    return &#x27;\x1b[&#x27; + color + &#x27;m&#x27; + message + &#x27;\x1b[0m&#x27;;
+  }
+  return message;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+self._startSlashRegex = /^\//;
+
+self._dataExpiryAccuracy = 5000;
+
+self._brokerEngine = require(self.options.brokerEngine);
+
+if (self.options.logLevel &#x3e; 0) {
+  console.log(&#x27;   &#x27; + self.<span class="apidocCodeKeywordSpan">colorText</span>(&#x27;[Busy]&#x27;, &#x27;yellow&#x27;) + &#
+x27; Launching SocketCluster&#x27;);
+}
+
+process.stdin.on(&#x27;error&#x27;, function (err) {
+  self.warningHandler(err, {type: &#x27;master&#x27;});
+});
+
+/*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype.errorHandler" id="apidoc.element.socketcluster.SocketCluster.prototype.errorHandler">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>errorHandler
+        <span class="apidocSignatureSpan">(err, origin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">errorHandler = function (err, origin) {
+  if (!(err instanceof Object)) {
+    // If a string (or null...)
+    err = new UnknownError(err);
+  } else if (err.stack == null) {
+    err.stack = err.message;
+  }
+  var annotation = this._errorAnnotations[err.code];
+  if (annotation) {
+    err.stack += &#x27;\n    &#x27; + this.colorText(&#x27;!!&#x27;, &#x27;red&#x27;) + &#x27; &#x27; + annotation;
+  }
+
+  err.origin = origin;
+  err.time = Date.now();
+  this.emit(this.EVENT_FAIL, err);
+
+  this._logObject(err, &#x27;Error&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+self._errorAnnotations = {
+  &#x27;EADDRINUSE&#x27;: &#x27;Failed to bind to a port because it was already used by another process.&#x27;
+};
+
+self._errorDomain = domain.create();
+self._errorDomain.on(&#x27;error&#x27;, function (err) {
+  self.<span class="apidocCodeKeywordSpan">errorHandler</span>(err, {
+    type: &#x27;master&#x27;
+  });
+});
+self._errorDomain.add(self);
+
+self._errorDomain.run(function () {
+  self._init(options);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype.killBrokers" id="apidoc.element.socketcluster.SocketCluster.prototype.killBrokers">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>killBrokers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">killBrokers = function () {
+  if (this._brokerEngineServer) {
+    this._brokerEngineServer.destroy();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype.killWorkers" id="apidoc.element.socketcluster.SocketCluster.prototype.killWorkers">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>killWorkers
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">killWorkers = function (options) {
+  if (this._workerCluster) {
+    this._workerCluster.send({
+      type: &#x27;terminate&#x27;,
+      data: options || {}
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (self.options.environment == &#x27;dev&#x27;) {
+      warning = &#x27;Master received SIGUSR2 signal - Shutting down all workers immediately&#x27;;
+      killOptions.immediate = true;
+    } else {
+      warning = &#x27;Master received SIGUSR2 signal - Shutting down all workers in accordance with processTermTimeout&#x27;;
+    }
+    self.warningHandler(warning, {type: &#x27;master&#x27;});
+    self.<span class="apidocCodeKeywordSpan">killWorkers</span>(killOptions);
+    if (self.options.killMasterOnSignal) {
+      process.exit();
+    }
+  });
+}
+
+this._active = true;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype.log" id="apidoc.element.socketcluster.SocketCluster.prototype.log">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>log
+        <span class="apidocSignatureSpan">(message, time)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (message, time) {
+  if (time == null) {
+    time = Date.now();
+  }
+  console.log(time + &#x27; - &#x27; + message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+self._startSlashRegex = /^\//;
+
+self._dataExpiryAccuracy = 5000;
+
+self._brokerEngine = require(self.options.brokerEngine);
+
+if (self.options.logLevel &#x3e; 0) {
+  console.<span class="apidocCodeKeywordSpan">log</span>(&#x27;   &#x27; + self.colorText(&#x27;[Busy]&#x27;, &#x27;yellow&#x27;) + &#
+x27; Launching SocketCluster&#x27;);
+}
+
+process.stdin.on(&#x27;error&#x27;, function (err) {
+  self.warningHandler(err, {type: &#x27;master&#x27;});
+});
+
+/*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype.sendToBroker" id="apidoc.element.socketcluster.SocketCluster.prototype.sendToBroker">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>sendToBroker
+        <span class="apidocSignatureSpan">(brokerId, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendToBroker = function (brokerId, data) {
+  this._brokerEngineServer.sendToBroker(brokerId, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  type: &#x27;masterMessage&#x27;,
+  workerId: workerId,
+  data: data
+});
+};
+
+SocketCluster.prototype.sendToBroker = function (brokerId, data) {
+this._brokerEngineServer.<span class="apidocCodeKeywordSpan">sendToBroker</span>(brokerId, data);
+};
+
+// The options object is optional and can have two boolean fields:
+// immediate: Shut down the workers immediately without waiting for termination timeout.
+// killClusterMaster: Shut down the cluster master (load balancer) as well as all the workers.
+SocketCluster.prototype.killWorkers = function (options) {
+if (this._workerCluster) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype.sendToWorker" id="apidoc.element.socketcluster.SocketCluster.prototype.sendToWorker">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>sendToWorker
+        <span class="apidocSignatureSpan">(workerId, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendToWorker = function (workerId, data) {
+  this._workerCluster.send({
+    type: &#x27;masterMessage&#x27;,
+    workerId: workerId,
+    data: data
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype.triggerInfo" id="apidoc.element.socketcluster.SocketCluster.prototype.triggerInfo">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>triggerInfo
+        <span class="apidocSignatureSpan">(info, origin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">triggerInfo = function (info, origin) {
+  if (this._active) {
+    if (!(origin instanceof Object)) {
+      origin = {
+        type: origin
+      };
+    }
+    var infoData = {
+      origin: origin,
+      message: info,
+      time: Date.now()
+    };
+    this.emit(this.EVENT_WARNING, infoData);
+
+    if (this.options.logLevel &#x3e; 0) {
+      this._logObject(infoData, &#x27;Info&#x27;, infoData.time)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.SocketCluster.prototype.warningHandler" id="apidoc.element.socketcluster.SocketCluster.prototype.warningHandler">
+        function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>warningHandler
+        <span class="apidocSignatureSpan">(warning, origin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warningHandler = function (warning, origin) {
+  if (!(warning instanceof Object)) {
+    // If a string (or null...)
+    warning = new UnknownError(warning);
+  } else if (warning.stack == null) {
+    warning.stack = warning.message;
+  }
+  warning.origin = origin;
+  warning.time = Date.now();
+
+  this.emit(this.EVENT_WARNING, warning);
+
+  if (this.options.logLevel &#x3e; 1) {
+    this._logObject(warning, &#x27;Warning&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+self._brokerEngine = require(self.options.brokerEngine);
+
+if (self.options.logLevel &#x3e; 0) {
+  console.log(&#x27;   &#x27; + self.colorText(&#x27;[Busy]&#x27;, &#x27;yellow&#x27;) + &#x27; Launching SocketCluster&#x27;);
+}
+
+process.stdin.on(&#x27;error&#x27;, function (err) {
+  self.<span class="apidocCodeKeywordSpan">warningHandler</span>(err, {type: &#x27;master&#x27;});
+});
+
+/*
+  To allow inserting blank lines in console on Windows to aid with debugging.
+*/
+if (process.platform == &#x27;win32&#x27;) {
+  process.stdin.resume();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socketcluster.scworker" id="apidoc.module.socketcluster.scworker">module socketcluster.scworker</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.scworker" id="apidoc.element.socketcluster.scworker.scworker">
+        function <span class="apidocSignatureSpan">socketcluster.</span>scworker
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scworker = function (options) {
+  var self = this;
+
+  this.EVENT_ERROR = &#x27;error&#x27;;
+  this.EVENT_WARNING = &#x27;warning&#x27;;
+  this.EVENT_EXIT = &#x27;exit&#x27;;
+  this.EVENT_READY = &#x27;ready&#x27;;
+  this.EVENT_CONNECTION = &#x27;connection&#x27;;
+
+  this.MIDDLEWARE_START = &#x27;start&#x27;;
+
+  this.type = &#x27;worker&#x27;;
+
+  this._errorDomain = domain.create();
+  this._errorDomain.on(&#x27;error&#x27;, function () {
+    self.errorHandler.apply(self, arguments);
+  });
+
+  this.start = this._errorDomain.bind(this._start);
+  this._errorDomain.run(function () {
+    self._init(options);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socketcluster.scworker.prototype" id="apidoc.module.socketcluster.scworker.prototype">module socketcluster.scworker.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype._calculateStatus" id="apidoc.element.socketcluster.scworker.prototype._calculateStatus">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>_calculateStatus
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_calculateStatus = function () {
+  var perMinuteFactor = 60000 / this.options.workerStatusInterval;
+  this._httpRPM = this._httpRequestCount * perMinuteFactor;
+  this._wsRPM = this._wsRequestCount * perMinuteFactor;
+  this._httpRequestCount = 0;
+  this._wsRequestCount = 0;
+
+  var memThreshold = this.options.killWorkerMemoryThreshold;
+
+  if (memThreshold != null) {
+    var memoryUsage = process.memoryUsage();
+    if (memoryUsage.heapUsed &#x3e; memThreshold) {
+      var message = &#x27;Worker killed itself because its memory &#x27;;
+      message += &#x27;usage of &#x27; + memoryUsage.heapUsed + &#x27; exceeded &#x27;;
+      message += &#x27;the killWorkerMemoryThreshold of &#x27; + memThreshold;
+      var warning = new ResourceLimitError(message);
+      this.warningHandler(warning);
+      process.exit();
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype._httpRequestHandler" id="apidoc.element.socketcluster.scworker.prototype._httpRequestHandler">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>_httpRequestHandler
+        <span class="apidocSignatureSpan">(req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_httpRequestHandler = function (req, res) {
+  var self = this;
+
+  this._httpRequestCount++;
+
+  req.exchange = req.global = this.exchange;
+
+  var forwardedFor = req.headers[&#x27;x-forwarded-for&#x27;];
+
+  if (forwardedFor) {
+    var forwardedClientIP;
+    if (forwardedFor.indexOf(&#x27;,&#x27;) &#x3e; -1) {
+      forwardedClientIP = forwardedFor.split(&#x27;,&#x27;)[0];
+    } else {
+      forwardedClientIP = forwardedFor;
+    }
+    req.forwardedForAddress = forwardedClientIP;
+  }
+  if (req.connection) {
+    req.remoteAddress = req.connection.remoteAddress;
+    req.remoteFamily = req.connection.remoteFamily;
+    req.remotePort = req.connection.remotePort;
+  } else if (req.socket) {
+    req.remoteAddress = req.socket.remoteAddress;
+    req.remoteFamily = req.socket.remoteFamily;
+    req.remotePort = req.socket.remotePort;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype._init" id="apidoc.element.socketcluster.scworker.prototype._init">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>_init
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_init = function (options) {
+  var self = this;
+
+  this.options = {};
+
+  for (var i in options) {
+    if (options.hasOwnProperty(i)) {
+      this.options[i] = options[i];
+    }
+  }
+
+  this.id = this.options.id;
+  this.isLeader = this.id == 0;
+
+  this._middleware = {};
+  this._middleware[this.MIDDLEWARE_START] = [];
+
+  if (this.options.downgradeToUser &#x26;&#x26; process.setuid) {
+    try {
+      process.setuid(this.options.downgradeToUser);
+    } catch (err) {
+      this._errorDomain.emit(&#x27;error&#x27;, new InvalidActionError(&#x27;Could not downgrade to user &#x22;&#x27; + this.options.downgradeToUser +
+        &#x27;&#x22; - Either this user does not exist or the current process does not have the permission&#x27; +
+        &#x27; to switch to it.&#x27;));
+    }
+  }
+
+  this.brokerEngine = require(this.options.brokerEngine);
+
+  this._paths = options.paths;
+
+  this._httpRequestCount = 0;
+  this._wsRequestCount = 0;
+  this._httpRPM = 0;
+  this._wsRPM = 0;
+
+  this.brokerEngineClient = new this.brokerEngine.Client({
+    brokers: this.options.brokers,
+    secretKey: this.options.secretKey,
+    pubSubBatchDuration: this.options.pubSubBatchDuration
+  });
+
+  this.brokerEngineClient.on(&#x27;error&#x27;, function (err) {
+    var error;
+    if (typeof err == &#x27;string&#x27;) {
+      error = new BrokerError(err);
+    } else {
+      error = err;
+    }
+    self._errorDomain.emit(&#x27;error&#x27;, error);
+  });
+  this.brokerEngineClient.on(&#x27;warning&#x27;, function () {
+    self.warningHandler.apply(self, arguments);
+  });
+  this.exchange = this.global = this.brokerEngineClient.exchange();
+
+  if (this.options.httpServerModule) {
+    var httpServerFactory = require(this.options.httpServerModule);
+    this.httpServer = httpServerFactory.createServer(this.options.protocolOptions);
+  } else {
+    if (this.options.protocol == &#x27;https&#x27;) {
+      this.httpServer = https.createServer(this.options.protocolOptions);
+    } else {
+      this.httpServer = http.createServer();
+    }
+  }
+  this.httpServer.on(&#x27;request&#x27;, this._httpRequestHandler.bind(this));
+  this.httpServer.on(&#x27;upgrade&#x27;, this._httpRequestHandler.bind(this));
+
+  this.httpServer.exchange = this.httpServer.global = this.exchange;
+
+  var httpServerErrorDomain = domain.create();
+  httpServerErrorDomain.add(this.httpServer);
+  httpServerErrorDomain.on(&#x27;error&#x27;, function (err) {
+    if (typeof err == &#x27;string&#x27;) {
+      error = new HTTPServerError(err);
+    } else {
+      error = err;
+    }
+    self._errorDomain.emit(&#x27;error&#x27;, error);
+  });
+
+  var secure = this.options.protocol == &#x27;https&#x27; ? 1 : 0;
+
+  this.scServer = socketClusterServer.attach(this.httpServer, {
+    brokerEngine: this.brokerEngineClient,
+    wsEngine: this._paths.wsEnginePath,
+    allowClientPublish: this.options.allowClientPublish,
+    handshakeTimeout: this.options.handshakeTimeout,
+    ackTimeout: this.options.ackTimeout,
+    pingTimeout: this.options.pingTimeout,
+    pingInterval: this.options.pingInterval,
+    origins: this.options.origins,
+    appName: this.options.appName,
+    path: this.options.path,
+    authKey: this.options.authKey,
+    authPrivateKey: this.options.authPrivateKey,
+    authPublicKey: this.options.authPublicKey,
+    authAlgorithm: this.options.authAlgorithm,
+    authSignAsync: this.options.authSignAsync,
+    authVerifyAsync: this.options.authVerifyAsync,
+    authDefaultExpiry: this.options.authDefaultExpiry,
+    middlewareEmitWarnings: this.options.middlewareEmitWarnings,
+    socketChannelLimit: this.options.socketChannelLimit,
+    perMessageDeflate: this.options.perMessageDeflate
+  });
+
+  if (this.brokerEngineClient.setSCServer) {
+    this.brokerEngineClient.setSCServer(this.scServer);
+  }
+
+  // Default authentication engine
+  this.setAuthEngine(new AuthEngine());
+  this.codec = this.scServer.codec;
+
+  this.scServer.on(&#x27;_connection&#x27;, function (socket) {
+    // The connection event counts as a WS request
+    self._wsRequestCount++;
+    socket.on(&#x27;message&#x27;, function () {
+      self._wsRequestCount++;
+    });
+    self.emit(self.EVENT_CONNECTION, socket);
+  });
+
+  this.scServer.on(&#x27;warning&#x27;, function () {
+    self.warningHandler.apply(self, arguments);
+  });
+
+  this._socketPath = this.scServer.getPath ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  self.errorHandler(err, {
+    type: &#x27;master&#x27;
+  });
+});
+self._errorDomain.add(self);
+
+self._errorDomain.run(function () {
+  self.<span class="apidocCodeKeywordSpan">_init</span>(options);
+});
+};
+
+SocketCluster.prototype = Object.create(EventEmitter.prototype);
+
+SocketCluster.prototype._init = function (options) {
+var self = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype._start" id="apidoc.element.socketcluster.scworker.prototype._start">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>_start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_start = function () {
+  var self = this;
+
+  this._httpRequestCount = 0;
+  this._wsRequestCount = 0;
+  this._httpRPM = 0;
+  this._wsRPM = 0;
+
+  if (this._statusInterval != null) {
+    clearInterval(this._statusInterval);
+  }
+  this._statusInterval = setInterval(this._calculateStatus.bind(this), this.options.workerStatusInterval);
+
+  // Run the initController to initialize the global context
+  if (this._paths.appInitControllerPath != null) {
+      this._initController = require(this._paths.appInitControllerPath);
+      this._initController.run(this);
+  }
+
+  this._workerController = require(this._paths.appWorkerControllerPath);
+  this._workerController.run(this);
+
+  this._startServer();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  process.stdin.resume();
+  process.stdin.setEncoding(&#x27;utf8&#x27;);
+}
+
+if (self.options.downgradeToUser &#x26;&#x26; process.platform != &#x27;win32&#x27;) {
+  if (typeof self.options.downgradeToUser == &#x27;number&#x27;) {
+    fs.chownSync(self._socketDirPath, self.options.downgradeToUser, 0);
+    self.<span class="apidocCodeKeywordSpan">_start</span>();
+  } else {
+    uidNumber(self.options.downgradeToUser, function (err, uid, gid) {
+      if (err) {
+        throw new InvalidActionError(&#x27;Failed to downgrade to user &#x22;&#x27; + self.options.downgradeToUser + &#x27;&#x22
+; - &#x27; + err);
+      } else {
+        fs.chownSync(self._socketDirPath, uid, gid);
+        self._start();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype._startServer" id="apidoc.element.socketcluster.scworker.prototype._startServer">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>_startServer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_startServer = function () {
+  var self = this;
+
+  var options = this.options;
+
+  var start = function () {
+    if (options.tcpSynBacklog != null) {
+      self.httpServer.listen(options.sourcePort, options.host, options.tcpSynBacklog);
+    } else if (options.host != null) {
+      self.httpServer.listen(options.sourcePort, options.host);
+    } else {
+      self.httpServer.listen(options.sourcePort);
+    }
+  };
+
+  var startMiddleware = this._middleware[this.MIDDLEWARE_START];
+  if (startMiddleware.length) {
+    var callbackInvoked = false;
+
+    async.applyEachSeries(startMiddleware, options, function (err) {
+      if (callbackInvoked) {
+        self.emit(&#x27;warning&#x27;, new InvalidActionError(&#x27;Callback for &#x27; + self.MIDDLEWARE_START + &#x27; middleware was already invoked&#x27;));
+      } else {
+        callbackInvoked = true;
+        if (err) {
+          throw err;
+        } else {
+          start();
+        }
+      }
+    });
+  } else {
+    start();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  this.scServer.on(&#x27;ready&#x27;, function () {
+    self.emit(self.EVENT_READY);
+  });
+};
+
+SCWorker.prototype.open = function () {
+  this.<span class="apidocCodeKeywordSpan">_startServer</span>();
+};
+
+SCWorker.prototype.close = function (callback) {
+  this.scServer.close();
+  this.httpServer.close(callback);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.addMiddleware" id="apidoc.element.socketcluster.scworker.prototype.addMiddleware">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>addMiddleware
+        <span class="apidocSignatureSpan">(type, middleware)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addMiddleware = function (type, middleware) {
+  this._middleware[type].push(middleware);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.close" id="apidoc.element.socketcluster.scworker.prototype.close">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>close
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function (callback) {
+  this.scServer.close();
+  this.httpServer.close(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+SCWorker.prototype.open = function () {
+  this._startServer();
+};
+
+SCWorker.prototype.close = function (callback) {
+  this.scServer.<span class="apidocCodeKeywordSpan">close</span>();
+  this.httpServer.close(callback);
+};
+
+// getSocketURL is deprecated
+SCWorker.prototype.getSocketPath = SCWorker.prototype.getSocketURL = function () {
+  return this._socketPath;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.errorHandler" id="apidoc.element.socketcluster.scworker.prototype.errorHandler">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>errorHandler
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">errorHandler = function (err) {
+  this.emit(this.EVENT_ERROR, err);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+self._errorAnnotations = {
+  &#x27;EADDRINUSE&#x27;: &#x27;Failed to bind to a port because it was already used by another process.&#x27;
+};
+
+self._errorDomain = domain.create();
+self._errorDomain.on(&#x27;error&#x27;, function (err) {
+  self.<span class="apidocCodeKeywordSpan">errorHandler</span>(err, {
+    type: &#x27;master&#x27;
+  });
+});
+self._errorDomain.add(self);
+
+self._errorDomain.run(function () {
+  self._init(options);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.getHTTPServer" id="apidoc.element.socketcluster.scworker.prototype.getHTTPServer">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>getHTTPServer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHTTPServer = function () {
+  return this.httpServer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.getSCServer" id="apidoc.element.socketcluster.scworker.prototype.getSCServer">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>getSCServer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSCServer = function () {
+  return this.scServer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.getSocketPath" id="apidoc.element.socketcluster.scworker.prototype.getSocketPath">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>getSocketPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSocketPath = function () {
+  return this._socketPath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.getSocketURL" id="apidoc.element.socketcluster.scworker.prototype.getSocketURL">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>getSocketURL
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSocketURL = function () {
+  return this._socketPath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.getStatus" id="apidoc.element.socketcluster.scworker.prototype.getStatus">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>getStatus
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getStatus = function () {
+  return {
+    clientCount: this.scServer.clientsCount,
+    httpRPM: this._httpRPM,
+    wsRPM: this._wsRPM
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.handleMasterEvent" id="apidoc.element.socketcluster.scworker.prototype.handleMasterEvent">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>handleMasterEvent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handleMasterEvent = function () {
+  this.emit.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  worker.on(&#x27;ready&#x27;, function () {
+    worker.start();
+    handleReady();
+  });
+} else if (m.type == &#x27;emit&#x27;) {
+  if (m.data) {
+    worker.<span class="apidocCodeKeywordSpan">handleMasterEvent</span>(m.event, m.data);
+  } else {
+    worker.handleMasterEvent(m.event);
+  }
+} else if (m.type == &#x27;masterMessage&#x27;) {
+  worker.handleMasterMessage(m);
+} else if (m.type == &#x27;terminate&#x27;) {
+  if (worker &#x26;&#x26; !m.data.immediate) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.handleMasterMessage" id="apidoc.element.socketcluster.scworker.prototype.handleMasterMessage">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>handleMasterMessage
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handleMasterMessage = function (message) {
+  this.emit(&#x27;masterMessage&#x27;, message.data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+} else if (m.type == &#x27;emit&#x27;) {
+  if (m.data) {
+    worker.handleMasterEvent(m.event, m.data);
+  } else {
+    worker.handleMasterEvent(m.event);
+  }
+} else if (m.type == &#x27;masterMessage&#x27;) {
+  worker.<span class="apidocCodeKeywordSpan">handleMasterMessage</span>(m);
+} else if (m.type == &#x27;terminate&#x27;) {
+  if (worker &#x26;&#x26; !m.data.immediate) {
+    worker.close(function () {
+      process.exit();
+    });
+    setTimeout(function () {
+      process.exit();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.open" id="apidoc.element.socketcluster.scworker.prototype.open">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function () {
+  this._startServer();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.removeMiddleware" id="apidoc.element.socketcluster.scworker.prototype.removeMiddleware">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>removeMiddleware
+        <span class="apidocSignatureSpan">(type, middleware)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeMiddleware = function (type, middleware) {
+  var middlewareFunctions = this._middleware[type];
+
+  this._middleware[type] = middlewareFunctions.filter(function (fn) {
+    return fn != middleware;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.sendToMaster" id="apidoc.element.socketcluster.scworker.prototype.sendToMaster">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>sendToMaster
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendToMaster = function (data) {
+  process.send({
+    type: &#x27;workerMessage&#x27;,
+    data: data,
+    workerId: this.id
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.setAuthEngine" id="apidoc.element.socketcluster.scworker.prototype.setAuthEngine">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>setAuthEngine
+        <span class="apidocSignatureSpan">(authEngine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAuthEngine = function (authEngine) {
+  this.auth = authEngine;
+
+  this.httpServer.auth = this.auth;
+  this.scServer.setAuthEngine(this.auth);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+SCWorker.prototype = Object.create(EventEmitter.prototype);
+
+SCWorker.prototype.setAuthEngine = function (authEngine) {
+  this.auth = authEngine;
+
+  this.httpServer.auth = this.auth;
+  this.scServer.<span class="apidocCodeKeywordSpan">setAuthEngine</span>(this.auth);
+};
+
+SCWorker.prototype.setCodecEngine = function (codecEngine) {
+  this.codec = codecEngine;
+  this.scServer.setCodecEngine(this.codec);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.setCodecEngine" id="apidoc.element.socketcluster.scworker.prototype.setCodecEngine">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>setCodecEngine
+        <span class="apidocSignatureSpan">(codecEngine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setCodecEngine = function (codecEngine) {
+  this.codec = codecEngine;
+  this.scServer.setCodecEngine(this.codec);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+this.httpServer.auth = this.auth;
+this.scServer.setAuthEngine(this.auth);
+};
+
+SCWorker.prototype.setCodecEngine = function (codecEngine) {
+this.codec = codecEngine;
+this.scServer.<span class="apidocCodeKeywordSpan">setCodecEngine</span>(this.codec);
+};
+
+SCWorker.prototype._init = function (options) {
+var self = this;
+
+this.options = {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.scworker.prototype.warningHandler" id="apidoc.element.socketcluster.scworker.prototype.warningHandler">
+        function <span class="apidocSignatureSpan">socketcluster.scworker.prototype.</span>warningHandler
+        <span class="apidocSignatureSpan">(warning)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warningHandler = function (warning) {
+  this.emit(this.EVENT_WARNING, warning);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+self._brokerEngine = require(self.options.brokerEngine);
+
+if (self.options.logLevel &#x3e; 0) {
+  console.log(&#x27;   &#x27; + self.colorText(&#x27;[Busy]&#x27;, &#x27;yellow&#x27;) + &#x27; Launching SocketCluster&#x27;);
+}
+
+process.stdin.on(&#x27;error&#x27;, function (err) {
+  self.<span class="apidocCodeKeywordSpan">warningHandler</span>(err, {type: &#x27;master&#x27;});
+});
+
+/*
+  To allow inserting blank lines in console on Windows to aid with debugging.
+*/
+if (process.platform == &#x27;win32&#x27;) {
+  process.stdin.resume();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
