@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"socketcluster",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "socketcluster",
+    "description": "api documentation for [socketcluster (v5.9.1)](http://socketcluster.io) [![npm package](https://img.shields.io/npm/v/npmdoc-socketcluster.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-socketcluster) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-socketcluster.svg)](https://travis-ci.org/npmdoc/node-npmdoc-socketcluster)",
     "devDependencies": {
-        "socketcluster": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "socketcluster": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-socketcluster",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-socketcluster",
+    "keywords": [
+        "documentation",
+        "socketcluster"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_socketcluster.js",
+    "name": "npmdoc-socketcluster",
+    "nameAlias": "npmdoc_socketcluster",
+    "nameOriginal": "npmdoc-socketcluster",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-socketcluster"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
