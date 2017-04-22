@@ -51,7 +51,7 @@
 
         href="http://socketcluster.io"
 
-    >socketcluster (v5.9.1)</a>
+    >socketcluster (v5.10.2)</a>
 </h1>
 <h4>SocketCluster - A Highly parallelized WebSocket server cluster to make the most of multi-core machines/instances.</h4>
 <div class="apidocSectionDiv"><a
@@ -82,6 +82,12 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socketcluster.</span>SocketCluster.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socketcluster.</span>index</span>
 
         </li>
 
@@ -347,6 +353,19 @@
             <a class="apidocElementLiA" href="#apidoc.element.socketcluster.SocketCluster.prototype.warningHandler">
             function <span class="apidocSignatureSpan">socketcluster.SocketCluster.prototype.</span>warningHandler
             <span class="apidocSignatureSpan">(warning, origin)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socketcluster.index">module socketcluster.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socketcluster.index.SocketCluster">
+            function <span class="apidocSignatureSpan">socketcluster.index.</span>SocketCluster
+            <span class="apidocSignatureSpan">(options)</span>
             </a>
 
         </li>
@@ -642,6 +661,8 @@ per process.&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
+
+
 
 
 
@@ -1925,6 +1946,56 @@ process.stdin.on(&#x27;error&#x27;, function (err) {
 if (process.platform == &#x27;win32&#x27;) {
   process.stdin.resume();
 ...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socketcluster.index" id="apidoc.module.socketcluster.index">module socketcluster.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socketcluster.index.SocketCluster" id="apidoc.element.socketcluster.index.SocketCluster">
+        function <span class="apidocSignatureSpan">socketcluster.index.</span>SocketCluster
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SocketCluster = function (options) {
+  var self = this;
+  if (socketClusterSingleton) {
+    var doubleInstantiationError = new Error(&#x27;The SocketCluster master object is a singleton - It can only be instantiated once
+per process.&#x27;);
+    doubleInstantiationError.name = &#x27;DoubleInstantiationError&#x27;;
+    throw doubleInstantiationError;
+  }
+  socketClusterSingleton = self;
+
+  self.EVENT_FAIL = &#x27;fail&#x27;;
+  self.EVENT_WARNING = &#x27;warning&#x27;;
+  self.EVENT_INFO = &#x27;info&#x27;;
+  self.EVENT_READY = &#x27;ready&#x27;;
+  self.EVENT_WORKER_START = &#x27;workerStart&#x27;;
+  self.EVENT_WORKER_EXIT = &#x27;workerExit&#x27;;
+
+  self._errorAnnotations = {
+    &#x27;EADDRINUSE&#x27;: &#x27;Failed to bind to a port because it was already used by another process.&#x27;
+  };
+
+  self._errorDomain = domain.create();
+  self._errorDomain.on(&#x27;error&#x27;, function (err) {
+    self.errorHandler(err, {
+      type: &#x27;master&#x27;
+    });
+  });
+  self._errorDomain.add(self);
+
+  self._errorDomain.run(function () {
+    self._init(options);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
