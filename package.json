@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "socketcluster",
-    "description": "api documentation for [socketcluster (v5.9.1)](http://socketcluster.io) [![npm package](https://img.shields.io/npm/v/npmdoc-socketcluster.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-socketcluster) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-socketcluster.svg)](https://travis-ci.org/npmdoc/node-npmdoc-socketcluster)",
+    "description": "#### api documentation for  [socketcluster (v5.10.2)](http://socketcluster.io)  [![npm package](https://img.shields.io/npm/v/npmdoc-socketcluster.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-socketcluster) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-socketcluster.svg)](https://travis-ci.org/npmdoc/node-npmdoc-socketcluster)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "socketcluster": "*",
@@ -36,5 +36,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.1"
+    "version": "2017.4.23"
 }
